@@ -1,0 +1,47 @@
+.icons {
+  width: 738px;
+  height: 273px;
+  display: flex;
+}
+.icons div {
+  width: 33%;
+  display: inline-block;
+}
+
+.icons div:hover {
+  background: #f8f8f8 0% 0% no-repeat padding-box;
+  cursor: pointer;
+}
+
+.icon {
+  height: 273px;
+  background-color: inherit;
+  border: none;
+  opacity: 1;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+.rock {
+  width: 63px;
+  height: 160px;
+  padding-top: 30px;
+}
+
+.paper {
+  width: 69px;
+  height: 160px;
+}
+
+.scissors {
+  width: 63px;
+  height: 160px;
+}
+
+.icons p {
+  font: normal normal 500 24px Montserrat;
+  letter-spacing: 0px;
+  color: #36006c;
+}
