@@ -1,0 +1,137 @@
+.waiting-modal {
+  position: absolute;
+  top: 20px;
+  left: 244px;
+  width: 879px;
+  height: 492px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 40px #0000001a;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.close-button {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 20px;
+  right: 20px;
+  background: transparent url("./assets/X.svg") 0% 0% no-repeat padding-box;
+  opacity: 0.54;
+  border: none;
+}
+
+.close-button:hover {
+  cursor: pointer;
+}
+
+.waiting-text {
+  position: absolute;
+  top: 81px;
+  left: 223px;
+  width: 432px;
+  height: 39px;
+  text-align: center;
+  font: normal normal 500 32px Montserrat;
+  letter-spacing: 0px;
+  color: #36006c;
+  opacity: 1;
+}
+
+.your-choice-icon {
+  position: absolute;
+  top: 208px;
+  left: 192px;
+  width: 69px;
+  height: 160px;
+}
+
+.your-bet-text {
+  position: absolute;
+  top: 379px;
+  left: 179px;
+  width: 90px;
+  height: 25px;
+  text-align: center;
+  font: normal normal 500 25px Montserrat;
+  letter-spacing: 0px;
+  color: #36006c;
+}
+
+.loader-icon {
+  position: absolute;
+  top: 282px;
+  right: 202px;
+  width: 64px;
+  height: 10px;
+  background: transparent 0% 0% no-repeat padding-box;
+}
+
+.curb-icon {
+  position: absolute;
+  top: 399px;
+  right: 191px;
+  width: 76px;
+  height: 24px;
+}
+
+.end-modal {
+  position: absolute;
+  top: 20px;
+  left: 437px;
+  width: 492px;
+  height: 591px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 0px 0px 40px #0000001a;
+  border-radius: 5px;
+  z-index: 100;
+}
+
+.result-text {
+  position: absolute;
+  top: 51px;
+  left: 159px;
+  width: 174px;
+  height: 39px;
+  text-align: center;
+  font: normal normal 500 32px Montserrat;
+  letter-spacing: 0px;
+  color: #36006c;
+}
+
+.winner-text {
+  position: absolute;
+  top: 118px;
+  left: 150px;
+  width: 193px;
+  height: 24px;
+  text-align: left;
+  font: normal normal 300 21px Roboto;
+  letter-spacing: 0px;
+  color: #000000;
+  opacity: 0.54;
+}
+
+.winner-choice-icon {
+  position: absolute;
+  top: 239px;
+  left: 211px;
+  width: 69px;
+  height: 160px;
+}
+
+.ok-button {
+  position: absolute;
+  top: 461px;
+  left: 70px;
+  width: 352px;
+  height: 73px;
+  background: #36006c 0% 0% no-repeat padding-box;
+  border-radius: 5px;
+  text-align: center;
+  font: normal normal 500 39px Montserrat;
+  letter-spacing: 0px;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}

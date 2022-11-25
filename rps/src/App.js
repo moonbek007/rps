@@ -1,11 +1,32 @@
+import { useState, useEffect } from "react";
 import Icons from "./icons/Icons";
+import Modal from "./modal/Modal";
 
 import "./App.css";
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [yourChoice, setYourChoice] = useState({ choice: "", icon: "" });
+
+  useEffect(() => {
+    if (yourChoice.choice !== "") {
+      setIsModalOpen(true);
+    }
+    console.log(yourChoice);
+  }, [yourChoice.choice]);
+
   return (
     <div className="App">
-      <body className="body">
+      <div className="body">
+        {isModalOpen ? (
+          <Modal
+            icon={yourChoice.icon}
+            setIsModalOpen={setIsModalOpen}
+            setYourChoice={setYourChoice}
+          />
+        ) : (
+          ""
+        )}
         <div className="main-display">
           <h1 className="title">ROCK – PAPER – SCISSORS</h1>
           <p className="game-description">
@@ -15,9 +36,9 @@ function App() {
             degree of power and will lead to an outcome.
           </p>
           <p className="select-title">SELECT YOUR BET</p>
-          <Icons />
+          <Icons setYourChoice={setYourChoice} />
         </div>
-      </body>
+      </div>
     </div>
   );
 }
