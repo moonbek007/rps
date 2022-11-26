@@ -18,10 +18,15 @@ function Modal({
     setYourChoice({ choice: "", icon: "" });
     setGameState("start");
   };
-  return gameState === "waiting" ? (
-    <WaitingModal icon={icon} toggleModal={toggleModal} />
-  ) : (
-    <EndModal toggleModal={toggleModal} winner={winner} />
+  return (
+    <div className="modal">
+      {gameState === "waiting" ? (
+        <WaitingModal icon={icon} toggleModal={toggleModal} />
+      ) : (
+        <EndModal toggleModal={toggleModal} winner={winner} />
+      )}
+      ;
+    </div>
   );
 }
 
