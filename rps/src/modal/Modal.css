@@ -16,7 +16,7 @@
   height: 20px;
   top: 20px;
   right: 20px;
-  background: transparent url("./assets/X.svg") 0% 0% no-repeat padding-box;
+  background: transparent url("../assets/svg/X.svg") 0% 0% no-repeat padding-box;
   opacity: 0.54;
   border: none;
 }

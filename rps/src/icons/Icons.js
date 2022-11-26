@@ -1,14 +1,13 @@
 import React from "react";
 
-import Rock from "./svg/Rock.svg";
-import Paper from "./svg/Paper.svg";
-import Scissors from "./svg/Scissors.svg";
+import Rock from "../assets/svg/Rock.svg";
+import Paper from "../assets/svg/Paper.svg";
+import Scissors from "../assets/svg/Scissors.svg";
 
 import "./Icons.css";
 
 function Icons({ setYourChoice }) {
   const makeYourChoice = (choice, icon) => {
-    console.log("clicked", choice, icon);
     setYourChoice({ choice, icon });
   };
   return (

@@ -1,7 +1,7 @@
 import React from "react";
 
-import Loader from "../assets/Loader.svg";
-import CurbLogo from "../assets/Curb_logo.png";
+import Loader from "../../assets/svg/Loader.svg";
+import CurbLogo from "../../assets/svg/Curb_logo.png";
 
 function WaitingModal({ icon, toggleModal }) {
   return (

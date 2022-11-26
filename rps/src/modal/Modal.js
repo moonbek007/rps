@@ -5,13 +5,24 @@ import EndModal from "./EndModal/EndModal";
 
 import "./Modal.css";
 
-function Modal({ icon, setIsModalOpen, setYourChoice }) {
+function Modal({
+  icon,
+  setIsModalOpen,
+  setYourChoice,
+  gameState,
+  setGameState,
+  winner,
+}) {
   const toggleModal = () => {
     setIsModalOpen(false);
     setYourChoice({ choice: "", icon: "" });
-    console.log("clicked");
+    setGameState("start");
   };
-  return <EndModal icon={icon} toggleModal={toggleModal} />;
+  return gameState === "waiting" ? (
+    <WaitingModal icon={icon} toggleModal={toggleModal} />
+  ) : (
+    <EndModal toggleModal={toggleModal} winner={winner} />
+  );
 }
 
 export default Modal;

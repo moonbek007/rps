@@ -1,19 +1,29 @@
 import { useState, useEffect } from "react";
 import Icons from "./icons/Icons";
 import Modal from "./modal/Modal";
+import getWinner from "./utility/getWinner";
+import getValueForCurb from "./utility/getValueForCurb";
 
 import "./App.css";
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [yourChoice, setYourChoice] = useState({ choice: "", icon: "" });
+  const [curbChoice, setCurbChoice] = useState(getValueForCurb());
+  const [gameState, setGameState] = useState("start");
+  const [winner, setWinner] = useState({ winner: "", choice: "", icon: "" });
 
   useEffect(() => {
     if (yourChoice.choice !== "") {
       setIsModalOpen(true);
+      setGameState("waiting");
+      setTimeout(() => {
+        setWinner(getWinner(yourChoice.choice, curbChoice.choice));
+        setCurbChoice(getValueForCurb());
+        setGameState("end");
+      }, 2000);
     }
-    console.log(yourChoice);
-  }, [yourChoice.choice]);
+  }, [yourChoice.choice, curbChoice.choice]);
 
   return (
     <div className="App">
@@ -23,6 +33,9 @@ function App() {
             icon={yourChoice.icon}
             setIsModalOpen={setIsModalOpen}
             setYourChoice={setYourChoice}
+            gameState={gameState}
+            setGameState={setGameState}
+            winner={winner}
           />
         ) : (
           ""
